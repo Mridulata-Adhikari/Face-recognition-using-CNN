@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/style.css">
+  <style>h2 {
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+}
+        </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="static/script.js"></script>
+</head>
+<body>
+<h2>Flask Image Gallery</h2>
+  <div class="overlay"><img src="blah" id="top" hidden=True>
+    <span id="close" hidden=True onclick=do_close()><b><u>CLOSE(X)</u></b></span>
+  </div>
+  <div class="cx" style="background-color:#fff;">
+    {% for path in paths %}
+    <img src='cdn/{{ path }}' height=200 width=200 onclick="window.open(this.src, '_blank');"/>
+    {% endfor %}
+  </div>
+</body>
+</html>
